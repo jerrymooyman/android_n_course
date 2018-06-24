@@ -10,6 +10,8 @@ import android.support.annotation.IdRes
 import android.util.Log
 import android.view.View
 import android.widget.SeekBar
+import java.util.*
+import kotlin.concurrent.timerTask
 
 class MainActivity : AppCompatActivity() { //, SeekBar.OnSeekBarChangeListener {
 
@@ -39,10 +41,33 @@ class MainActivity : AppCompatActivity() { //, SeekBar.OnSeekBarChangeListener {
             }
 
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                Log.i("seekbar value: ", progress.toString())
-
                 audioManager!!.setStreamVolume(AudioManager.STREAM_MUSIC, progress, 0)
             }
+        })
+
+
+        val fileDuration: Int = mplayer!!.duration
+        val scrubController: SeekBar = bind(R.id.scrubber)
+        scrubController.max = fileDuration
+
+        Timer().scheduleAtFixedRate(timerTask {
+           scrubController.progress = mplayer!!.currentPosition
+        }, 0, 100)
+
+        scrubController.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                Log.i("seekbar value: ", progress.toString())
+                mplayer!!.seekTo(progress)
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
         })
     }
 
