@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/commonkoel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:text="Common Keol"
+            android:onClick="buttonTapped"
+            />
+
+        <Button
+            android:id="@+id/australianmagpie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:onClick="buttonTapped"
+            android:text="Magpie" />
+
+        <Button
+            android:id="@+id/australianraven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:onClick="buttonTapped"
+            android:text="Crow" />
+
+        <Button
+            android:id="@+id/greybutcherbird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:onClick="buttonTapped"
+            android:text="Butcher Bird" />
+
+        <Button
+            android:id="@+id/laughingkookaburra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:onClick="buttonTapped"
+            android:text="Kookaburra" />
+
+        <Button
+            android:id="@+id/maskedlapwing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:onClick="buttonTapped"
+            android:text="Lapwing" />
+
+        <Button
+            android:id="@+id/piedcurrawong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="3"
+            android:layout_rowWeight="1"
+            android:onClick="buttonTapped"
+            android:text="Currawong" />
+
+        <Button
+            android:id="@+id/southernboobook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="3"
+            android:layout_rowWeight="1"
+            android:onClick="buttonTapped"
+            android:text="Boo Book" />
+
+        <Button
+            android:id="@+id/williewagtail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="4"
+            android:layout_rowWeight="1"
+            android:onClick="buttonTapped"
+            android:text="Willie Wagtail" />
+
+        <Button
+            android:id="@+id/yellowtailedblackcockatoo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="4"
+            android:layout_rowWeight="1"
+            android:onClick="buttonTapped"
+            android:text="Cockatoo" />
+
+
+
+    </GridLayout>
+
+</android.support.constraint.ConstraintLayout>
